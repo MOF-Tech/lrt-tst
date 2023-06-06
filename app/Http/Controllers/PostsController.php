@@ -99,5 +99,8 @@ class PostsController extends Controller
     public function destroy(string $id)
     {
         //
+        $blog = Post::find($id);
+        $blog ->delete();
+
     }
 }
