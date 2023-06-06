@@ -46,8 +46,7 @@ class PostsController extends Controller
        $blog->save();
 
        redirect('/posts')->with('success','you did it you succesfully created a blog');
-       
-      
+        
     }
 
     /**

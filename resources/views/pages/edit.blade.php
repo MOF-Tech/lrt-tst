@@ -93,13 +93,14 @@ body {
 
 <div class="form-container">
     <h1>Here is where you edit a post</h1>
-    <form  action="/posts/{{$blog->id}}" method="PUT">
-       
+    <form  action="/posts/{{$blog->id}}" method="POST">
         @csrf
         <label for="title">Title</label>
-        <input type="text" name="title" placeholder="tile of the person" value="" required>
+        <input type="text" name="title" placeholder="tile of the person" value="{{$blog->title}}" required>
         <label for="body">Body</label>
-        <textarea name="body" id="" cols="30" rows="10"  required></textarea>
+        <textarea name="body" id="" cols="30" rows="10"  required > {{$blog->body}}</textarea>
+       
+        <input name="_method" type="hidden" value="PUT">
         <input type="submit" >
     </form>
   </div>
