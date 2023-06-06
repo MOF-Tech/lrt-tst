@@ -23,6 +23,7 @@
     <a href="/posts/{{$blog->id}}/edit">edit</a>
 
     <form method="POST"   action="/posts/{{$blog->id}}">
+        @csrf
         <input name="_method" type="hidden" value="DELETE">
         <input type="submit"  style="background-color: red;padding:3px;">
     </form>

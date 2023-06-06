@@ -102,5 +102,7 @@ class PostsController extends Controller
         $blog = Post::find($id);
         $blog ->delete();
 
+        redirect('/posts')->with('success','you did delete');
+
     }
 }
